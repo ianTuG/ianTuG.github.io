@@ -1,34 +1,117 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Đức Bình | Profile</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
-    <link rel="shortcut icon" type="image/png" href="./images/avatar.jpg"/>
-  </head>
-  <body>
-    
-    <div class="card">
-      <div class="card-image">
-        <img src="./images/'-'.png" alt="">
-      </div>
-      <div class="profile-image">
-        <img src="./images/avatar.jpg" alt="">
-      </div>
-      <div class="card-content">
-        <h3>Đức Bình</h3>
-        <p>haha</p>
-      </div>
-      <div class="icons">
-        <a href="https://www.facebook.com/brityres/" target="_blank" class="fab fa-facebook-f"></a>
-        <a href="https://www.youtube.com/channel/UCEeB3fUG5ew6Iq8mrc4LLfw" class="fab fa-youtube"></a>
-        <a href="https://www.instagram.com/binhduckie/" target="_blank" class="fab fa-instagram"></a>
-        <a href="https://twitter.com/Bnhinhc1" target="_blank" class="fab fa-twitter"></a>
-      </div>
-    </div>
-    <div class="footer">
-         <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjZ0qrjrOb2AhVfslYBHSKPDMIQyCl6BAgUEAM&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DdQw4w9WgXcQ&usg=AOvVaw0aHtehaphMhOCAkCydRLZU" target="_blank" style="color: #f2f2f2">&copy BinhDev S1mp</a>
-    </div>
-  </body>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&family=Oswald:wght@200&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    *{
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+    body{
+      padding-top: 1vh;
+    display: flex;
+    margin: 0px auto;
+    font-family: 'Oswald';
+    font-size: 25px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    background: rgb(189,209,27);
+background: linear-gradient(90deg, rgba(189,209,27,1) 0%, rgba(237,29,191,1) 41%, rgba(0,212,255,1) 100%);
+color: white;
+    }
+    .avatar{
+      width:250px;
+      height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: #fff;
+    }
+    .avatar img{
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .avatar img:hover{
+      width: 235px;
+      height: 235px;
+      cursor: pointer;
+    }
+    span {
+      width: 250px;
+      font-size: 18px;
+    }
+    #description{
+      text-align: center;
+      width: 300px;
+    }
+    a{
+      color: #000;
+      text-decoration: none;
+      width: 250px;
+      height: 50px;
+      border-radius: 20px;
+    }
+    ul {
+      margin:0px;
+      padding:0px;
+    }
+    ul li{
+      list-style: none;
+      width: 250px;
+      height: 50px;
+      background: #fff;
+      margin-top: 1vh;
+      text-align: center;
+      border-radius: 20px;
+      line-height: 50px;
+    }
+    a:hover{
+      text-decoration: underline;
+    }
+  </style>
+  <title>Profile</title>
+</head>
+<body>
+  <div id="infor">day, mm/dd/yyyy</div>
+  <div class="avatar">
+    <img src="./avatar.jpeg" alt="" width="200" height="200">
+  </div>
+  <div id="description">
+    <h3 style="font-weight: bolder;">Binh Duc (binhdevs1mp)</h3>
+    <span>Xin chào, tôi tên Bình (nickname: binhdev simp). Tôi từng là game thủ Liên Minh Huyền Thoại, Fifa Online 4 (FCO4)... Và hiện tại là 1 coder mới học nghề. Tôi cũng là nhà từ thiện tình thương, kẻ tự kỉ và là một gã simp lỏd...</span>
+  </div>
+  <div id="links">
+    <ul>
+      <li><a href="https://vcard.link/card/DzBI.vcf" id="links-edit">Phone: 035 5954 832</a></li>
+      <li><a href="https://facebook.com/s0reziy.am.5/" id="links-edit">Facebook (OA)</a></li>
+      <li><a href="https://facebook.com/anquanghuyhu/" id="links-edit">Facebook (CA)</a></li>
+      <li><a href="https://www.instagram.com/jnklmlubunlm/" id="links-edit">Instagram</a></li>
+      <li><a href="https://www.youtube.com/channel/UCEeB3fUG5ew6Iq8mrc4LLfw" id="links-edit">Youtube</a></li>
+      <li><a href="https://github.com/binhdev-simp" id="links-edit">GitHub</a></li>
+    </ul>
+  </div>
+  <div><a style="font-size: 15px" href="#">footer_contents</a></div>
+</body>
+<script>
+const date = new Date();
+
+let day = date.getDate();
+let dayOfWeek = date.getDay();
+let month = date.getMonth();
+let year = date.getFullYear();
+const pkg_dOW = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+const pkg_m = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+let dowtxt = pkg_dOW[dayOfWeek];
+let mtxt = pkg_m[month];
+const topBar = document.getElementById('infor');
+topBar.innerHTML = dowtxt + ', ' + mtxt + '/' + day + '/'+ year;
+console.log(dowtxt, mtxt, day, year);
+</script>
 </html>
